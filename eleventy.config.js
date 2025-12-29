@@ -10,6 +10,8 @@ import autoprefixer from 'autoprefixer';
 export default async function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/");
 
+    eleventyConfig.addPlugin(HtmlBasePlugin);
+
     // Compile Tailwind : https://www.humankode.com/eleventy/how-to-set-up-tailwind-4-with-eleventy-3/
     eleventyConfig.on('eleventy.before', async () => {
         const tailwindInput = path.resolve("./src/style.css");
