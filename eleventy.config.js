@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/postcss';
 
 import autoprefixer from 'autoprefixer';
 
+import { HtmlBasePlugin } from "@11ty/eleventy";
+
 export default async function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/");
 
