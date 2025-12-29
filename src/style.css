@@ -69,3 +69,5 @@
     font-size: var(--text-base);
   }
 }
+
+@custom-variant hocus (&:hover, &:focus);
