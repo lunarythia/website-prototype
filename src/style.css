@@ -14,7 +14,7 @@
     background-color: var(--color-base);
     color: var(--color-primary);
     font-family: var(--font-body);
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
   }
 
   a {
@@ -32,7 +32,11 @@
       background-color: var(--color-link);
       border-radius: 5px;
       transform-origin: bottom center;
-      transition: transform 0.1s ease-out;
+      transition: all 0.1s ease-out;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
     }
 
     &:hover::after {
@@ -62,6 +66,6 @@
   }
 
   p {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
   }
 }
