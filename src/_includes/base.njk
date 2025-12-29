@@ -11,21 +11,30 @@
   <body>
     <header class="bg-accent rounded-b-3xl sticky">
       <div
-        class="flex flex-wrap items-center justify-between max-w-5xl mx-auto my-0 px-10 py-2"
+        class="gap-x-10 flex flex-wrap items-center justify-between max-w-4xl mx-auto my-0 px-10 py-2"
       >
-        <a class="text-primary text-4xl mr-10" href="/">Lunarythia :3</a>
+        <a class="text-primary text-3xl after:bg-primary" href="/">Lunarythia :3</a>
         <nav>
-          <ul class="gap-x-5 flex">
+          <ul class="gap-x-5 flex flex-wrap">
             <li>
               <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="/">Home</a>
             </li>
             <li>
               <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="/second">Second</a>
             </li>
+            <li>
+              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Third</a>
+            </li>
+            <li>
+              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Fourth</a>
+            </li>
+            <li>
+              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Fifth</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="max-w-5xl mx-auto my-0 px-10 py-2">{{ content | safe }}</main>
+    <main class="max-w-4xl mx-auto my-0 px-10 py-2">{{ content | safe }}</main>
   </body>
 </html>
