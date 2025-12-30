@@ -14,42 +14,11 @@
         <a class="text-primary after:bg-primary text-3xl" href="/">Lunarythia :3</a>
         <nav>
           <ul class="flex flex-wrap gap-x-5">
-            {{ navitem("test", "/aaa") }}
-            <li>
-              <a
-                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
-                href="/">
-                Home</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
-                href="/second"
-                >Second</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
-                href="#">
-                Third</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
-                href="#">
-                Fourth</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
-                href="#">
-                Fifth</a
-              >
-            </li>
+            {{ navitem("Home",   "/") }}
+            {{ navitem("Second", "/second") }}
+            {{ navitem("Third",  "#") }}
+            {{ navitem("Fourth", "#") }}
+            {{ navitem("Fifth",  "#") }}
           </ul>
         </nav>
       </div>
