@@ -1,7 +1,7 @@
 import fs, { watch } from 'fs';
 import path from 'path';
 
-// import cssnano from 'cssnano';
+import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss'
@@ -34,10 +34,10 @@ export default async function (eleventyConfig) {
     const processor = postcss([
         tailwindcss(),
         autoprefixer(),
-        purgeCSSPlugin({ content: ["./build/**/*.html"] })
-        // cssnano({
-        //     preset: 'default',
-        // }),
+        purgeCSSPlugin({ content: ["./build/**/*.html"] }),
+        cssnano({
+            preset: 'default',
+        }),
     ]);
 };
 
