@@ -34,7 +34,12 @@ export default async function (eleventyConfig) {
     const processor = postcss([
         tailwindcss(),
         autoprefixer(),
-        purgeCSSPlugin({ content: ["./build/**/*.html"] }),
+        purgeCSSPlugin({
+            content: ["./build/**/*.html"],
+            fontFace: true,
+            keyframes: true,
+            variables: true,
+        }),
         cssnano({
             preset: 'default',
         }),
