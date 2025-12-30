@@ -16,7 +16,7 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(HtmlBasePlugin);
 
     // Compile Tailwind : https://www.humankode.com/eleventy/how-to-set-up-tailwind-4-with-eleventy-3/
-    eleventyConfig.on('eleventy.before', async () => {
+    eleventyConfig.on('eleventy.after', async () => {
         const tailwindInput = path.resolve("./src/style.css");
         const tailwindOutput = path.resolve("./build/style.css");
         const cssContent = fs.readFileSync(tailwindInput);
@@ -35,7 +35,7 @@ export default async function (eleventyConfig) {
         tailwindcss(),
         autoprefixer(),
         purgeCSSPlugin({
-            content: ["./build/**/*.html"],
+            content: ["./build/**/*.html", "./src/**/*.njk"],
             fontFace: true,
             keyframes: true,
             variables: true,
