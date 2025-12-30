@@ -1,7 +1,7 @@
 import fs, { watch } from 'fs';
 import path from 'path';
 
-import cssnano from 'cssnano';
+// import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss'
@@ -40,9 +40,9 @@ export default async function (eleventyConfig) {
             keyframes: true,
             variables: true,
         }),
-        cssnano({
-            preset: 'default',
-        }),
+        // cssnano({
+        //     preset: 'default',
+        // }),
     ]);
 };
 

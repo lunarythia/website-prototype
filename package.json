@@ -24,8 +24,5 @@
     "prettier-plugin-jinja-template": "^2.1.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18"
-  },
-  "dependencies": {
-    "cssnano": "^7.1.2"
   }
 }
