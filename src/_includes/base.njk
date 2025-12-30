@@ -4,37 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/style.css" />
-    <title>
-      {{ (title + " | ") if page.url!="/"}}Lunarythia&rsquo;s Website
-    </title>
+    <title>{{ (title + " | ") if page.url!="/" }}Lunarythia&rsquo;s Website</title>
   </head>
   <body>
-    <header class="bg-accent rounded-b-3xl sticky">
-      <div
-        class="gap-x-10 flex flex-wrap items-center justify-between max-w-4xl mx-auto my-0 px-10 py-2"
-      >
-        <a class="text-primary text-3xl after:bg-primary" href="/">Lunarythia :3</a>
+    <header class="bg-accent sticky rounded-b-3xl">
+      <div class="mx-auto my-0 flex max-w-4xl flex-wrap items-center justify-between gap-x-10 px-10 py-2">
+        <a class="text-primary after:bg-primary text-3xl" href="/">Lunarythia :3</a>
         <nav>
-          <ul class="gap-x-5 flex flex-wrap">
+          <ul class="flex flex-wrap gap-x-5">
             <li>
-              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="/">Home</a>
+              <a
+                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+                href="/">
+                Home
+              </a>
             </li>
             <li>
-              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="/second">Second</a>
+              <a
+                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+                href="/second">
+                Second
+              </a>
             </li>
             <li>
-              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Third</a>
+              <a
+                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+                href="#">
+                Third
+              </a>
             </li>
             <li>
-              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Fourth</a>
+              <a
+                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+                href="#">
+                Fourth
+              </a>
             </li>
             <li>
-              <a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="#">Fifth</a>
+              <a
+                class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+                href="#">
+                Fifth
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="max-w-4xl mx-auto my-0 px-10 py-2">{{ content | safe }}</main>
+    <main class="mx-auto my-0 max-w-4xl px-10 py-2">{{ content | safe }}</main>
   </body>
 </html>
