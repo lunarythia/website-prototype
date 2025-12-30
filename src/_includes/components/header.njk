@@ -1,0 +1,18 @@
+{% from "components/nav-item.njk" import navitem %}
+
+{% macro header() -%}
+  <header class="bg-accent sticky rounded-b-3xl">
+    <div class="mx-auto my-0 flex max-w-4xl flex-wrap items-center justify-between gap-x-10 px-10 py-2">
+      <a class="text-primary after:bg-primary text-3xl" href="/">Lunarythia :3</a>
+      <nav>
+        <ul class="flex flex-wrap gap-x-5">
+          {{ navitem("Home",   "/") }}
+          {{ navitem("Second", "/second") }}
+          {{ navitem("Third",  "#") }}
+          {{ navitem("Fourth", "#") }}
+          {{ navitem("Fifth",  "#") }}
+        </ul>
+      </nav>
+    </div>
+  </header>
+{%- endmacro %}
