@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "prettier-plugin-tailwindcss"
+        "prettier-plugin-tailwindcss",
+        "prettier-plugin-jinja-template"
     ],
     "printWidth": 120,
     "bracketSameLine": true,
@@ -8,7 +9,7 @@
         {
             "files": "*.njk",
             "options": {
-                "parser": "html"
+                "parser": "jinja-template"
             }
         }
     ]

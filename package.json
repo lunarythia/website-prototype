@@ -21,6 +21,7 @@
     "cssnano": "^7.1.2",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
+    "prettier-plugin-jinja-template": "^2.1.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18"
   }
