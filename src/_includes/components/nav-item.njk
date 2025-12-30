@@ -1,5 +1,11 @@
-{% macro nav-item(title, link) %}
-    {% if title and link %}
-            <li><a class="text-primary opacity-75 hocus:opacity-100 after:bg-primary after:opacity-75 hocus:after:opacity-100" href="/">Home</a></li>
-    {% endif %}
+{% macro navitem(title, link) %}
+  {% if title and link %}
+    <li>
+      <a
+        class="text-primary hocus:opacity-100 after:bg-primary hocus:after:opacity-100 opacity-75 after:opacity-75"
+        href="{{ link }}">
+        {{ title }}
+      </a>
+    </li>
+  {% endif %}
 {% endmacro %}
