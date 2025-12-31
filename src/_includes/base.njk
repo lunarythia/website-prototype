@@ -1,4 +1,4 @@
-{% from "components/header.njk" import header %}
+{% from "components/header.njk" import header with context %}
 
 <!doctype html>
 <html lang="en">
@@ -10,6 +10,11 @@
   </head>
   <body>
     {{ header() }}
-    <main class="mx-auto my-0 max-w-4xl px-10 py-2">{{ content | safe }}</main>
+    <main class="mx-auto my-0 max-w-4xl px-10 py-2">
+      {%- if title -%}
+        <h1>{{ title }}</h1>
+      {%- endif -%}
+      {{ content | safe }}
+    </main>
   </body>
 </html>
