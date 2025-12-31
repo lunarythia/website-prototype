@@ -4,7 +4,6 @@ import path from "path";
 // import cssnano from 'cssnano';
 import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
-import { purgeCSSPlugin } from "@fullhuman/postcss-purgecss";
 
 import autoprefixer from "autoprefixer";
 
@@ -34,12 +33,6 @@ export default async function (eleventyConfig) {
   const processor = postcss([
     tailwindcss(),
     autoprefixer(),
-    purgeCSSPlugin({
-      content: ["./build/**/*.html", "./src/**/*.njk"],
-      fontFace: true,
-      keyframes: true,
-      variables: true,
-    }),
     // cssnano({
     //     preset: 'default',
     // }),
