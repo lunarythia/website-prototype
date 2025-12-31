@@ -1,4 +1,4 @@
-{% from "components/nav-item.njk" import navitem %}
+{% from "components/nav-item.njk" import navitem with context %}
 
 {% macro header() -%}
   <header class="bg-accent sticky rounded-b-3xl">
@@ -7,10 +7,10 @@
       <nav>
         <ul class="flex flex-wrap gap-x-5">
           {{ navitem("Home",   "/") }}
-          {{ navitem("Second", "/second") }}
+          {{ navitem("Blog",   "/blog/") }}
+          {{ navitem("Second", "/second/") }}
           {{ navitem("Third",  "#") }}
           {{ navitem("Fourth", "#") }}
-          {{ navitem("Fifth",  "#") }}
         </ul>
       </nav>
     </div>
