@@ -1,9 +1,10 @@
 import fs, { watch } from "fs";
 import path from "path";
 
-// import cssnano from 'cssnano';
+import cssnano from 'cssnano';
 import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
+import htmlminifier from "html-minifier-terser";
 
 import autoprefixer from "autoprefixer";
 
@@ -13,6 +14,23 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/");
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
+
+  // Minify HTML : https://www.11ty.dev/docs/transforms/#minify-html-output
+  eleventyConfig.addTransform("htmlminifier", function (content) {
+    // String conversion to handle `permalink: false`
+    if ((this.page.outputPath || "").endsWith(".html")) {
+      let minified = htmlminifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+
+      return minified;
+    }
+
+    // If not an HTML output, return content as-is
+    return content;
+  });
 
   // Compile Tailwind : https://www.humankode.com/eleventy/how-to-set-up-tailwind-4-with-eleventy-3/
   eleventyConfig.on("eleventy.after", async () => {
@@ -31,11 +49,11 @@ export default async function (eleventyConfig) {
   });
 
   const processor = postcss([
-    tailwindcss(),
+    tailwindcss({ base: "./build" }),
     autoprefixer(),
-    // cssnano({
-    //     preset: 'default',
-    // }),
+    cssnano({
+      preset: 'default',
+    }),
   ]);
 }
 
