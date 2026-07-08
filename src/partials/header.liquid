@@ -1,0 +1,14 @@
+<header class="bg-accent sticky rounded-b-3xl">
+  <div class="mx-auto my-0 flex max-w-3xl flex-wrap items-center justify-between gap-x-10 px-6 py-2">
+    <a class="text-primary after:bg-primary text-3xl" href="/">Lunarythia :3</a>
+    <nav>
+      <ul class="flex flex-wrap gap-x-5">
+        {% render "nav-item", title: "Home",   link: "/" %}
+        {% render "nav-item", title: "Blog",   link: "/blog/" %}
+        {% render "nav-item", title: "Second", link: "/second/" %}
+        {% render "nav-item", title: "Third",  link: "#" %}
+        {% render "nav-item", title: "Fourth", link: "#" %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -11,6 +11,13 @@ import autoprefixer from "autoprefixer";
 import { HtmlBasePlugin } from "@11ty/eleventy";
 
 export default async function (eleventyConfig) {
+  eleventyConfig.setLiquidOptions({
+    cache: true,
+    extname: '.liquid',
+    jsTruthy: true,
+    root: ["./src", "./src/partials", "./src/layouts"],
+  });
+
   eleventyConfig.addWatchTarget("./src/");
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
@@ -60,6 +67,8 @@ export default async function (eleventyConfig) {
 export const config = {
   dir: {
     input: "src",
+    includes: "partials",
+    layouts: "layouts",
     output: "build",
   },
 };
