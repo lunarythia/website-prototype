@@ -22,6 +22,8 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
+  eleventyConfig.addPassthroughCopy("./src/fonts/")
+
   // Minify HTML : https://www.11ty.dev/docs/transforms/#minify-html-output
   eleventyConfig.addTransform("htmlminifier", function (content) {
     // String conversion to handle `permalink: false`
