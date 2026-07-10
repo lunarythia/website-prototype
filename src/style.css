@@ -81,6 +81,8 @@
   p {
     font-size: var(--text-lg);
     margin: calc(var(--spacing) * 2) 0;
+    white-space-collapse: preserve;
+    white-space-collapse: preserve-spaces; /* TODO: Check on browser compat */
   }
 
   li {
