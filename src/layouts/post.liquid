@@ -1,0 +1,18 @@
+---
+layout: "base"
+---
+<article>
+  {%- if title -%}
+    <h1>{{ title }}</h1>
+  {%- endif -%}
+  {%- if author -%}
+    <span class="mt-0 text-diminished text-base">By {{author}}</span>
+  {%- endif -%}
+  {%- if author and date -%}
+    <span class="mt-0 mx-1.5 select-none text-diminished text-base">·</span>
+  {%- endif -%}
+  {%- if date -%}
+    <span class="mt-0 text-diminished text-base">{{date | date: '%A %d %B %Y' }}</span>
+  {%- endif -%}
+  {{ content }}
+</article>

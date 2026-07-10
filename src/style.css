@@ -14,16 +14,17 @@
 
 @theme {
   --color-accent: #550b4f;
-  --color-base: #30002c;
+  --color-back: #30002c;
   --color-primary: #fff4ff;
+  --color-diminished: #c69fc6;
   --color-link: #ff66ff;
-  --color-link-visited: #c69fc6;
+  --color-link-visited: #df46df;
   --font-body: "Junicode", serif;
 }
 
 @layer base {
   body {
-    background-color: var(--color-base);
+    background-color: var(--color-back);
     color: var(--color-primary);
     font-family: var(--font-body);
     font-size: var(--text-base);
@@ -77,10 +78,13 @@
     font-size: var(--text-xl);
   }
 
-  p,
-  li {
+  p {
     font-size: var(--text-lg);
     margin: calc(var(--spacing) * 2) 0;
+  }
+
+  li {
+    font-size: var(--text-lg);
   }
 }
 
