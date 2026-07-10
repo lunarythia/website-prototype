@@ -24,6 +24,19 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/fonts/")
 
+  eleventyConfig.addFilter("locDate", function (dateObj, locale = "en-GB") {
+    if (!dateObj) return "";
+
+    const date = new Date(dateObj);
+
+    return new Intl.DateTimeFormat(locale, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      weekday: "long"
+    }).format(date);
+  });
+
   // Minify HTML : https://www.11ty.dev/docs/transforms/#minify-html-output
   eleventyConfig.addTransform("htmlminifier", function (content) {
     // String conversion to handle `permalink: false`

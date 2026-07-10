@@ -12,7 +12,7 @@ layout: "base"
     <span class="mt-0 mx-1.5 select-none text-diminished text-base">·</span>
   {%- endif -%}
   {%- if date -%}
-    <span class="mt-0 text-diminished text-base">{{ date | date: '%A %d %B %Y' }}</span>
+    <span class="mt-0 text-diminished text-base">{{ date | locDate }}</span>
   {%- endif -%}
   {{ content }}
 </article>
