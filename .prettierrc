@@ -1,13 +1,5 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-jinja-template", "@shopify/prettier-plugin-liquid"],
+  "plugins": ["prettier-plugin-tailwindcss", "@shopify/prettier-plugin-liquid"],
   "printWidth": 120,
-  "bracketSameLine": true,
-  "overrides": [
-    {
-      "files": "*.njk",
-      "options": {
-        "parser": "jinja-template"
-      }
-    }
-  ]
+  "bracketSameLine": true
 }
