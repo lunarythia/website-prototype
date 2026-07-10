@@ -1,5 +1,6 @@
 {
   "plugins": ["prettier-plugin-tailwindcss", "@shopify/prettier-plugin-liquid"],
   "printWidth": 120,
-  "bracketSameLine": true
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "css"
 }
