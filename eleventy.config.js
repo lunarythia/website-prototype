@@ -25,21 +25,20 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/fonts/")
 
   // Minify HTML : https://www.11ty.dev/docs/transforms/#minify-html-output
-  eleventyConfig.addTransform("htmlminifier", function (content) {
-    // String conversion to handle `permalink: false`
-    if ((this.page.outputPath || "").endsWith(".html")) {
-      let minified = htmlminifier.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
+  // eleventyConfig.addTransform("htmlminifier", function (content) {
+  //   // String conversion to handle `permalink: false`
+  //   if ((this.page.outputPath || "").endsWith(".html")) {
+  //     let minified = htmlminifier.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //     });
 
-      return minified;
-    }
+  //     return minified;
+  //   }
 
-    // If not an HTML output, return content as-is
-    return content;
-  });
+  //   // If not an HTML output, return content as-is
+  //   return content;
+  // });
 
   // Compile Tailwind : https://www.humankode.com/eleventy/how-to-set-up-tailwind-4-with-eleventy-3/
   eleventyConfig.on("eleventy.after", async () => {
